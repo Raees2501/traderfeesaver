@@ -519,6 +519,49 @@
       transform: translateX(-50%) translateY(0);
     }
 
+    /* ── VIDEO SECTION ── */
+    .video-section { background: var(--bg-card2); }
+
+    .video-section .section-title { text-align: center; }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .video-frame {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 0 60px rgba(240, 185, 11, 0.08);
+      background: #000;
+    }
+
+    .video-frame video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-code-box {
+      background: var(--bg-card);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(240, 185, 11, 0.1);
+    }
+
+    .video-code-box .code-box-label { margin-bottom: 0.5rem; }
+
+    .video-code-box .code-display {
+      font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+      margin-bottom: 0;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero { padding: 4rem 1.25rem 3.5rem; }
@@ -555,6 +598,31 @@
       <div class="code-pill" onclick="copyCode('CPA_00KM2KORAE', this)">
         <span>CPA_00KM2KORAE</span>
         <span class="copy-icon">&#128203; Copy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="section video-section">
+    <div class="section-inner">
+      <div class="section-label">Watch &amp; See</div>
+      <div class="section-title">See How Much You Save</div>
+      <div class="video-container">
+        <div class="video-frame">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="assets/video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-code-box">
+          <div class="code-box-label">Your Referral Code</div>
+          <div class="code-display" onclick="copyCode('CPA_00KM2KORAE', this)" title="Click to copy">
+            CPA_00KM2KORAE
+          </div>
+          <p class="code-copy-hint" style="margin-top:0.5rem; margin-bottom:1.5rem;">&#128203; Click to copy</p>
+          <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00KM2KORAE&utm_source=referral_entrance" target="_blank" rel="noopener" class="btn-primary" style="width:100%; justify-content:center;">
+            Claim Your Fee Rebate Now &#8599;
+          </a>
+        </div>
       </div>
     </div>
   </section>
