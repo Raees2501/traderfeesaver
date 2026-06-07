@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://traderfeesaver.com/sitemap.xml
