@@ -490,6 +490,74 @@
     .rebate-highlight p { font-size: 0.9rem; color: var(--muted); }
     .rebate-highlight strong { color: var(--green); }
 
+    /* ── BLOG CARD GRID ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(240, 185, 11, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .blog-badge {
+      background: rgba(240,185,11,0.12);
+      border: 1px solid rgba(240,185,11,0.3);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+    }
+
+    .blog-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      color: var(--white);
+    }
+
+    .blog-card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--gold);
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-top: auto;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -548,6 +616,7 @@
       .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
       th, td { padding: 0.75rem 0.875rem; font-size: 0.82rem; }
       .code-box { padding: 2rem 1.25rem; }
+      .blog-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -560,7 +629,7 @@
       <div class="nav-links">
         <a href="index.html">Binance Code</a>
         <a href="exness.html" class="active">Exness Code</a>
-        <a href="blog/binance-referral-code-2026.html">Blog</a>
+        <a href="#blog">Blog</a>
       </div>
     </div>
   </nav>
@@ -747,22 +816,110 @@
     </div>
   </section>
 
-  <!-- BLOG INTERNAL LINK -->
+  <!-- BLOG SECTION -->
   <section class="section" id="blog" style="background: var(--bg-card2);">
     <div class="section-inner">
       <div class="section-label">From the Blog</div>
-      <div class="section-title">Exness Guides &amp; Tips</div>
-      <a href="blog/exness-partner-code-2026.html" style="display: block; text-decoration: none;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; max-width: 680px; transition: border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(240,185,11,0.5)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
-          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap;">
-            <span style="background: rgba(240,185,11,0.12); border: 1px solid rgba(240,185,11,0.3); color: var(--gold); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 100px;">Guide</span>
-            <span style="font-size: 0.8rem; color: var(--muted);">June 7, 2026 · 9 min read</span>
+      <div class="section-title">Exchange Guides &amp; Tips</div>
+      <div class="blog-grid">
+
+        <a href="blog/exness-partner-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 7, 2026 · 9 min read</span>
+            </div>
+            <h3>Exness Partner Code 2026: 9kpy0crr0b — Automatic Daily Rebates</h3>
+            <p>Step-by-step guide to using code 9kpy0crr0b, real money math on how much you save at different volume levels, and full account setup walkthrough.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
           </div>
-          <h3 style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.6rem; color: var(--white);">Exness Partner Code 2026: 9kpy0crr0b — Get Automatic Daily Trading Rebates</h3>
-          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem;">Step-by-step guide to using code 9kpy0crr0b, real money math on how much you save at different volume levels, broker comparison, and full account setup walkthrough.</p>
-          <span style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--gold); font-size: 0.875rem; font-weight: 700;">Read the full guide &#8599;</span>
-        </div>
-      </a>
+        </a>
+
+        <a href="blog/binance-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 7, 2026 · 8 min read</span>
+            </div>
+            <h3>Binance Referral Code 2026: CPA_00KM2KORAE — Up To $1,100 Fee Rebates</h3>
+            <p>How to use code CPA_00KM2KORAE, stack the BNB discount for up to 40% off fees, and what to expect from Binance in 2026.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/okx-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>OKX Referral Code 2026: 37031620 — 100 USDT Welcome Bonus</h3>
+            <p>Use OKX code 37031620 to claim a 100 USDT welcome bonus and access competitive fees on the world's #2 crypto derivatives exchange.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/mexc-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>MEXC Referral Code 2026: 12Ba3X — $60 USDT Free for Both Parties</h3>
+            <p>MEXC code 12Ba3X gives both the referrer and referred user $60 USDT free, plus access to MEXC's industry-leading 0% maker fee.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/bybit-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>Bybit Referral Code 2026 — Up to $30,000 Welcome Bonus</h3>
+            <p>Sign up on Bybit via our affiliate link to unlock up to $30,000 in welcome bonuses and competitive 0.1% spot trading fees.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/bitget-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>Bitget Referral Code 2026: 1AVMLUCB — 6,200 USDT Welcome Gift</h3>
+            <p>Use Bitget code 1AVMLUCB to unlock one of crypto's largest welcome packages — 6,200 USDT in gifts and copy trading access.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/gate-io-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>Gate.io Referral Code 2026: AIRCVlxW — 100 USDT + 10,000 USDT Prizes</h3>
+            <p>Use Gate.io code AIRCVlxW to receive 100 USDT in welcome rewards plus entry into Gate.io's $10,000+ new user prize pool.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/bingx-referral-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-badge">Guide</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+            </div>
+            <h3>BingX Referral Code 2026: HYITMI — Earn Up to 50% Commission</h3>
+            <p>Use BingX code HYITMI to unlock welcome bonuses and earn up to 50% commission on referrals from the leading social trading exchange.</p>
+            <span class="blog-card-link">Read the full guide &#8599;</span>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
 
@@ -772,8 +929,9 @@
       <div class="footer-links">
         <a href="index.html">Binance Code</a>
         <a href="exness.html">Exness Code</a>
+        <a href="#blog">Blog</a>
       </div>
-      <p class="footer-disc">traderfeesaver.com is an independent affiliate site. Not affiliated with, endorsed by, or officially connected to Binance or Exness. Trading involves risk. Rebates are subject to Exness's terms and conditions.</p>
+      <p class="footer-disc">traderfeesaver.com is an independent affiliate site. Not affiliated with, endorsed by, or officially connected to Binance, Exness, or any other exchange listed. Trading involves risk. Rebates are subject to Exness's terms and conditions.</p>
       <p class="footer-disc" style="margin-top: 0.75rem;">Contact: <a href="mailto:traderfeesaver@gmail.com" style="color: var(--gold); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">traderfeesaver@gmail.com</a></p>
     </div>
   </footer>
