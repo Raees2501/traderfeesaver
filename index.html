@@ -118,6 +118,7 @@
     .nav-links {
       display: flex;
       gap: 0.5rem;
+      align-items: center;
     }
 
     .nav-links a {
@@ -131,6 +132,53 @@
 
     .nav-links a:hover { color: var(--white); background: var(--bg-card); }
     .nav-links a.active { color: var(--gold); background: rgba(240, 185, 11, 0.1); }
+
+    /* ── NAV DROPDOWN ── */
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+
+    .nav-dropdown-btn {
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.2s;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-btn { color: var(--white); background: var(--bg-card); }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.5rem;
+      min-width: 160px;
+      z-index: 200;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+
+    .nav-dropdown-menu a {
+      padding: 0.5rem 0.875rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
 
     /* ── HERO ── */
     .hero {
@@ -637,6 +685,7 @@
       .hero { padding: 4rem 1.25rem 3.5rem; }
       .section { padding: 3.5rem 1.25rem; }
       .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+      .nav-dropdown-btn { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
       th, td { padding: 0.75rem 0.875rem; font-size: 0.82rem; }
       .code-box { padding: 2rem 1.25rem; }
       .blog-grid { grid-template-columns: 1fr; }
@@ -652,6 +701,17 @@
       <div class="nav-links">
         <a href="index.html" class="active">Binance Code</a>
         <a href="exness.html">Exness Code</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">More Exchanges &#9662;</button>
+          <div class="nav-dropdown-menu">
+            <a href="okx-referral-code-2026.html">OKX Code</a>
+            <a href="mexc-referral-code-2026.html">MEXC Code</a>
+            <a href="blog/bybit-referral-code-2026.html">Bybit Code</a>
+            <a href="bitget-referral-code-2026.html">Bitget Code</a>
+            <a href="gate-io-referral-code-2026.html">Gate.io Code</a>
+            <a href="bingx-referral-code-2026.html">BingX Code</a>
+          </div>
+        </div>
         <a href="#blog">Blog</a>
       </div>
     </div>
@@ -954,6 +1014,12 @@
       <div class="footer-links">
         <a href="index.html">Binance Code</a>
         <a href="exness.html">Exness Code</a>
+        <a href="okx-referral-code-2026.html">OKX Code</a>
+        <a href="mexc-referral-code-2026.html">MEXC Code</a>
+        <a href="blog/bybit-referral-code-2026.html">Bybit Code</a>
+        <a href="bitget-referral-code-2026.html">Bitget Code</a>
+        <a href="gate-io-referral-code-2026.html">Gate.io Code</a>
+        <a href="bingx-referral-code-2026.html">BingX Code</a>
         <a href="#blog">Blog</a>
       </div>
       <p class="footer-disc">traderfeesaver.com is an independent affiliate site. Not affiliated with, endorsed by, or officially connected to Binance or any other exchange listed. Referral rewards are subject to each exchange's terms and conditions.</p>
