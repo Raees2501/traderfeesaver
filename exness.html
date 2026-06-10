@@ -31,30 +31,14 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is this an official Exness partner code?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. This is an official Exness IB partner code registered on exnessaffiliates.com."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When do I receive my rebates?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Daily. Rebates are credited automatically every business day to your trading account."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which account types qualify?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standard, Pro, Zero and Raw Spread accounts all qualify for daily rebates."
-        }
-      }
+      { "@type": "Question", "name": "Is this an official Exness partner code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. This is an official Exness IB partner code registered on exnessaffiliates.com. You register directly on Exness — no third-party sites handle your account or funds." } },
+      { "@type": "Question", "name": "When do I receive my Exness rebates?", "acceptedAnswer": { "@type": "Answer", "text": "Daily. Rebates are credited automatically every business day to your trading account. No manual claims or requests are required — just trade and collect." } },
+      { "@type": "Question", "name": "Which Exness account types qualify for rebates?", "acceptedAnswer": { "@type": "Answer", "text": "Standard, Pro, Zero and Raw Spread accounts all qualify for daily rebates. The rebate structure varies by account type." } },
+      { "@type": "Question", "name": "Is there a minimum deposit to receive Exness rebates?", "acceptedAnswer": { "@type": "Answer", "text": "No. Exness rebates apply to all qualifying trades regardless of account size. There is no minimum deposit requirement to start receiving daily rebates with partner code 9kpy0crr0b." } },
+      { "@type": "Question", "name": "Do Exness rebates apply to all trading pairs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Daily rebates apply to all instruments available on Exness including forex pairs, metals, indices, energies, stocks, and cryptocurrencies." } },
+      { "@type": "Question", "name": "Can I use the Exness partner code on both MT5 and MT4?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Partner code 9kpy0crr0b works on accounts using both MetaTrader 5 and MetaTrader 4. All qualifying trades on either platform earn daily rebates." } },
+      { "@type": "Question", "name": "Can I open multiple Exness accounts with the same partner code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Exness allows multiple trading accounts under one personal area profile. All accounts created under your profile linked with partner code 9kpy0crr0b qualify for daily rebates." } },
+      { "@type": "Question", "name": "How do I verify my Exness rebates are being credited?", "acceptedAnswer": { "@type": "Answer", "text": "Log in to your Exness Personal Area and check the transaction history section. Rebates appear as daily credits. You can filter transactions to see rebate entries specifically." } }
     ]
   }
   </script>
@@ -88,7 +72,6 @@
 
     a { color: inherit; text-decoration: none; }
 
-    /* ── NAVIGATION ── */
     nav {
       position: sticky;
       top: 0;
@@ -132,7 +115,6 @@
     .nav-links a:hover { color: var(--white); background: var(--bg-card); }
     .nav-links a.active { color: var(--gold); background: rgba(240, 185, 11, 0.1); }
 
-    /* ── HERO ── */
     .hero {
       padding: 6rem 1.5rem 5rem;
       text-align: center;
@@ -243,7 +225,6 @@
     .code-pill .copy-icon { font-size: 0.875rem; color: var(--muted); transition: color 0.2s; }
     .code-pill:hover .copy-icon { color: var(--gold); }
 
-    /* ── SECTION COMMON ── */
     .section { padding: 5rem 1.5rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
 
@@ -264,7 +245,6 @@
       line-height: 1.2;
     }
 
-    /* ── HOW IT WORKS ── */
     .how-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -308,7 +288,6 @@
     .step-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
     .step-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
-    /* ── TABLE ── */
     .table-wrap {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -352,7 +331,6 @@
       border-radius: 6px;
     }
 
-    /* ── BIG CODE BOX ── */
     .code-box-section { background: var(--bg-card2); }
 
     .code-box {
@@ -398,7 +376,6 @@
       gap: 0.4rem;
     }
 
-    /* ── WHY SECTION ── */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -419,7 +396,6 @@
     .why-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
     .why-card p { font-size: 0.85rem; color: var(--muted); }
 
-    /* ── FAQ ── */
     .faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 720px; margin: 0 auto; }
 
     .faq-item {
@@ -470,11 +446,10 @@
     }
 
     .faq-item.open .faq-a {
-      max-height: 200px;
+      max-height: 400px;
       padding: 0 1.5rem 1.25rem;
     }
 
-    /* ── DAILY REBATE HIGHLIGHT ── */
     .rebate-highlight {
       display: flex;
       align-items: center;
@@ -490,7 +465,6 @@
     .rebate-highlight p { font-size: 0.9rem; color: var(--muted); }
     .rebate-highlight strong { color: var(--green); }
 
-    /* ── BLOG CARD GRID ── */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -558,7 +532,6 @@
       margin-top: auto;
     }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 1.5rem;
@@ -585,7 +558,6 @@
       line-height: 1.6;
     }
 
-    /* ── TOAST ── */
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -609,7 +581,6 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero { padding: 4rem 1.25rem 3.5rem; }
       .section { padding: 3.5rem 1.25rem; }
@@ -622,7 +593,6 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">TraderFeeSaver</a>
@@ -634,7 +604,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-badge">Official Exness IB Partner Code</div>
     <h1>Exness Partner Code <span>9kpy0crr0b</span> — Get Automatic Daily Trading Rebates</h1>
@@ -650,7 +619,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="section">
     <div class="section-inner">
       <div class="section-label">Simple Process</div>
@@ -678,7 +646,6 @@
     </div>
   </section>
 
-  <!-- REBATE TABLE -->
   <section class="section" style="background: var(--bg-card2);">
     <div class="section-inner">
       <div class="section-label">Rebate Structure</div>
@@ -730,7 +697,6 @@
     </div>
   </section>
 
-  <!-- BIG CODE BOX -->
   <section class="section code-box-section">
     <div class="section-inner">
       <div class="code-box">
@@ -746,7 +712,6 @@
     </div>
   </section>
 
-  <!-- WHY EXNESS -->
   <section class="section">
     <div class="section-inner">
       <div class="section-label">Broker Overview</div>
@@ -781,7 +746,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section" style="background: var(--bg-card2);">
     <div class="section-inner">
       <div class="section-label">Common Questions</div>
@@ -798,7 +762,7 @@
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            When do I receive my rebates?
+            When do I receive my Exness rebates?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">Daily. Rebates are credited automatically every business day to your trading account. No manual claims or requests are required — just trade and collect.</div>
@@ -806,17 +770,56 @@
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            Which account types qualify?
+            Which account types qualify for rebates?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">Standard, Pro, Zero and Raw Spread accounts all qualify for daily rebates. The rebate structure varies by account type as shown in the table above.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is there a minimum deposit to receive Exness rebates?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">No. Exness rebates apply to all qualifying trades regardless of account size. There is no minimum deposit requirement to start receiving daily rebates with partner code 9kpy0crr0b.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do rebates apply to all trading pairs?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes. Daily rebates apply to all instruments on Exness including forex pairs, metals, indices, energies, stocks, and cryptocurrencies.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I use this partner code on both MT5 and MT4?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes. Partner code 9kpy0crr0b works with accounts on both MetaTrader 5 and MetaTrader 4. All qualifying trades on either platform earn daily rebates.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I open multiple Exness accounts with the same code?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Yes. Exness allows multiple trading accounts under one Personal Area profile. All accounts linked with partner code 9kpy0crr0b qualify for daily rebates.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How do I verify my Exness rebates are being credited?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Log in to your Exness Personal Area and check the transaction history section. Rebates appear as daily credits — filter transactions by type to see rebate entries specifically.</div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- BLOG SECTION -->
   <section class="section" id="blog" style="background: var(--bg-card2);">
     <div class="section-inner">
       <div class="section-label">From the Blog</div>
@@ -851,7 +854,7 @@
           <div class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-badge">Guide</span>
-              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 8, 2026 · 7 min read</span>
             </div>
             <h3>OKX Referral Code 2026: 37031620 — 100 USDT Welcome Bonus</h3>
             <p>Use OKX code 37031620 to claim a 100 USDT welcome bonus and access competitive fees on the world's #2 crypto derivatives exchange.</p>
@@ -871,11 +874,11 @@
           </div>
         </a>
 
-        <a href="blog/bybit-referral-code-2026.html" style="text-decoration:none;">
+        <a href="bybit-referral-code-2026.html" style="text-decoration:none;">
           <div class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-badge">Guide</span>
-              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 10, 2026 · 7 min read</span>
             </div>
             <h3>Bybit Referral Code 2026 — Up to $30,000 Welcome Bonus</h3>
             <p>Sign up on Bybit via our affiliate link to unlock up to $30,000 in welcome bonuses and competitive 0.1% spot trading fees.</p>
@@ -887,7 +890,7 @@
           <div class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-badge">Guide</span>
-              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 11, 2026 · 7 min read</span>
             </div>
             <h3>Bitget Referral Code 2026: 1AVMLUCB — 6,200 USDT Welcome Gift</h3>
             <p>Use Bitget code 1AVMLUCB to unlock one of crypto's largest welcome packages — 6,200 USDT in gifts and copy trading access.</p>
@@ -899,7 +902,7 @@
           <div class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-badge">Guide</span>
-              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 12, 2026 · 7 min read</span>
             </div>
             <h3>Gate.io Referral Code 2026: AIRCVlxW — 100 USDT + 10,000 USDT Prizes</h3>
             <p>Use Gate.io code AIRCVlxW to receive 100 USDT in welcome rewards plus entry into Gate.io's $10,000+ new user prize pool.</p>
@@ -911,7 +914,7 @@
           <div class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-badge">Guide</span>
-              <span style="font-size:0.8rem;color:var(--muted);">June 9, 2026 · 7 min read</span>
+              <span style="font-size:0.8rem;color:var(--muted);">June 13, 2026 · 7 min read</span>
             </div>
             <h3>BingX Referral Code 2026: HYITMI — Earn Up to 50% Commission</h3>
             <p>Use BingX code HYITMI to unlock welcome bonuses and earn up to 50% commission on referrals from the leading social trading exchange.</p>
@@ -923,7 +926,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-links">
@@ -936,7 +938,6 @@
     </div>
   </footer>
 
-  <!-- TOAST -->
   <div class="toast" id="toast">&#10003; Copied to clipboard!</div>
 
   <script>
