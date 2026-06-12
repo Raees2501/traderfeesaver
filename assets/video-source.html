@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1920px; background:#0b0e11; overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif; }
+  .scene { position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; opacity:0; }
+
+  /* ---------- Scene 1: 0 - 3.5s ---------- */
+  #s1 { animation: fadeHold1 3.5s linear 0s 1 both; }
+  @keyframes fadeHold1 { 0%{opacity:0} 12%{opacity:1} 88%{opacity:1} 100%{opacity:0} }
+  .rule { width:200px; height:4px; background:#F0B90B; margin:48px 0; }
+  #s1 h1 { font-size:88px; font-weight:bold; color:#F0B90B; text-align:center; line-height:1.25; }
+  #s1 h1 .white { color:#fff; }
+  #s1 .sub { font-size:42px; color:#9aa4af; margin-top:36px; }
+  #s1 .sub b { color:#f6465d; }
+
+  /* ---------- Scene 2: 3.5 - 8.5s ---------- */
+  #s2 { animation: fadeHold2 5s linear 3.5s 1 both; }
+  @keyframes fadeHold2 { 0%{opacity:0; transform:scale(1.06)} 10%{opacity:1; transform:scale(1)} 90%{opacity:1} 100%{opacity:0} }
+  #s2 .head { font-size:34px; font-weight:bold; color:#9aa4af; letter-spacing:8px; position:absolute; top:90px; }
+  .cards { display:flex; gap:80px; align-items:center; position:relative; }
+  .card { width:430px; height:1560px; border-radius:28px; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; }
+  .card.red   { background:rgba(246,70,93,0.06);  border:1px solid rgba(246,70,93,0.25); }
+  .card.green { background:rgba(14,203,129,0.06); border:1px solid rgba(14,203,129,0.25); }
+  .card .label { font-size:30px; font-weight:bold; color:#9aa4af; letter-spacing:3px; }
+  .card .amount { font-size:120px; font-weight:bold; margin:28px 0; }
+  .card.red .amount { color:#f6465d; }
+  .card.green .amount { color:#0ecb81; }
+  .card .fee { font-size:30px; color:#9aa4af; }
+  .vline { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:4px; height:300px; background:linear-gradient(transparent,#F0B90B,transparent); }
+  .save { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(0);
+    background:#F0B90B; color:#0b0e11; font-size:36px; font-weight:bold; padding:22px 42px;
+    border-radius:999px; box-shadow:0 0 60px rgba(240,185,11,0.55); white-space:nowrap;
+    animation: savePop 0.5s cubic-bezier(.2,1.6,.4,1) 5.2s 1 both; }
+  @keyframes savePop { 0%{transform:translate(-50%,-50%) scale(0)} 100%{transform:translate(-50%,-50%) scale(1)} }
+  #s2 .foot { position:absolute; bottom:100px; font-size:30px; color:#6b7480; }
+
+  /* ---------- Scene 3+4: 8.5 - 13s ---------- */
+  #s3 { animation: fadeHold3 4.5s linear 8.5s 1 both; }
+  @keyframes fadeHold3 { 0%{opacity:0} 8%{opacity:1} 92%{opacity:1} 100%{opacity:0} }
+  #s3 .use { font-size:52px; color:#9aa4af; margin-bottom:64px; }
+  #s3 .pill-wrap { opacity:0; animation: pillIn 0.6s ease-out 10s 1 both; display:flex; flex-direction:column; align-items:center; }
+  @keyframes pillIn { 0%{opacity:0; transform:scale(0.7)} 100%{opacity:1; transform:scale(1)} }
+  #s3 .pill { background:#F0B90B; border:6px solid rgba(255,255,255,0.35); border-radius:28px;
+    padding:60px 110px; font-size:104px; font-weight:bold; color:#14181d; letter-spacing:6px;
+    animation: glowPulse 1.6s ease-in-out 10s infinite; }
+  @keyframes glowPulse {
+    0%,100% { box-shadow:0 0 80px rgba(240,185,11,0.45); }
+    50%     { box-shadow:0 0 140px rgba(240,185,11,0.8); } }
+  #s3 .free { font-size:38px; color:#9aa4af; margin-top:64px; opacity:0; animation: fadeIn 0.6s ease 10.5s 1 both; }
+  @keyframes fadeIn { to { opacity:1 } }
+
+  /* ---------- Scene 5: 13 - 15s ---------- */
+  #s5 { animation: fadeHold5 2.1s linear 13s 1 both; }
+  @keyframes fadeHold5 { 0%{opacity:0} 20%{opacity:1} 100%{opacity:1} }
+  #s5 .l1 { font-size:62px; font-weight:bold; color:#fff; }
+  #s5 .l2 { font-size:128px; font-weight:bold; color:#F0B90B; margin:10px 0; }
+  #s5 .l3 { font-size:62px; font-weight:bold; color:#fff; }
+  #s5 .site { margin-top:70px; background:#F0B90B; border-radius:24px; padding:44px 90px;
+    font-size:58px; font-weight:bold; color:#14181d;
+    box-shadow:0 0 110px rgba(240,185,11,0.6); }
+  .stars { position:absolute; inset:0; }
+  .stars i { position:absolute; width:6px; height:6px; border-radius:50%; background:#F0B90B; opacity:0.5; }
+</style>
+</head>
+<body>
+
+<div class="scene" id="s1">
+  <div class="rule"></div>
+  <h1>Are you paying<br><span class="white">full Binance fees?</span></h1>
+  <div class="sub">Most traders lose <b>$100s per year</b></div>
+  <div class="rule"></div>
+</div>
+
+<div class="scene" id="s2">
+  <div class="head">FEE COMPARISON</div>
+  <div class="cards">
+    <div class="card red">
+      <div class="label">WITHOUT CODE</div>
+      <div class="amount">$100</div>
+      <div class="fee">fee on $100K trade</div>
+    </div>
+    <div class="card green">
+      <div class="label">WITH 775069017</div>
+      <div class="amount">$80</div>
+      <div class="fee">fee on $100K trade</div>
+    </div>
+    <div class="vline"></div>
+    <div class="save">SAVE $20</div>
+  </div>
+  <div class="foot">per $100,000 traded</div>
+</div>
+
+<div class="scene" id="s3">
+  <div class="use">Use referral code</div>
+  <div class="pill-wrap">
+    <div class="pill">775069017</div>
+  </div>
+  <div class="free">Free &mdash; applies automatically on signup</div>
+</div>
+
+<div class="scene" id="s5">
+  <div class="stars" id="stars"></div>
+  <div class="l1">Get Up To</div>
+  <div class="l2">$1,100</div>
+  <div class="l3">in Fee Rebates</div>
+  <div class="site">traderfeesaver.com</div>
+</div>
+
+<script>
+  const stars = document.getElementById('stars');
+  for (let i = 0; i < 36; i++) {
+    const s = document.createElement('i');
+    s.style.left = (Math.random()*100) + '%';
+    s.style.top  = (Math.random()*100) + '%';
+    s.style.opacity = 0.2 + Math.random()*0.5;
+    const sz = 3 + Math.random()*5;
+    s.style.width = sz+'px'; s.style.height = sz+'px';
+    stars.appendChild(s);
+  }
+</script>
+</body>
+</html>
