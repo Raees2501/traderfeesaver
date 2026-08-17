@@ -34,7 +34,7 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Is Fasset halal or Shariah-compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fasset is specifically designed as an Islamic-compliant crypto platform, making it suitable for Muslim traders who require halal financial products." } },
+      { "@type": "Question", "name": "Is Fasset halal or Shariah-compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Fasset is built specifically as a Shariah-compliant platform and retains formal Shariah advisory oversight - Mufti Faraz Adam has served as its Shariah Advisor for digital assets since 2022. Worth knowing: no universal certification for crypto exists, as AAOIFI has not issued a final standard on cryptocurrency as of 2026. Consult a scholar you trust for a ruling that applies to you." } },
       { "@type": "Question", "name": "How do I apply the Fasset referral code?", "acceptedAnswer": { "@type": "Answer", "text": "Click the button on this page. Code 0AQ0D2G is automatically applied at registration. You can also enter it manually in the referral field during signup." } },
       { "@type": "Question", "name": "Who is eligible for the Fasset bonus?", "acceptedAnswer": { "@type": "Answer", "text": "New Fasset users who have not previously registered an account and complete identity verification are eligible for exclusive referral rewards and the Fasset card bonus." } }
     ]
@@ -122,6 +122,73 @@
     .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--green); color: #000; font-weight: 700; font-size: 0.875rem; padding: 0.65rem 1.5rem; border-radius: 100px; opacity: 0; transition: all 0.3s; pointer-events: none; z-index: 999; white-space: nowrap; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     @media (max-width: 600px) { .hero { padding: 4rem 1.25rem 3.5rem; } .section { padding: 3.5rem 1.25rem; } .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.8rem; } th, td { padding: 0.75rem 0.875rem; font-size: 0.82rem; } .code-box { padding: 2rem 1.25rem; } }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(240, 185, 11, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .blog-badge {
+      background: rgba(240,185,11,0.12);
+      border: 1px solid rgba(240,185,11,0.3);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+    }
+
+    .blog-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      color: var(--white);
+      flex: 1;
+    }
+
+    .blog-card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--gold);
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
@@ -228,6 +295,52 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Fasset Guides</div>
+      <div class="section-title" style="text-align:center;">Go Deeper on Fasset</div>
+      <div class="blog-grid" style="margin-top:2rem;">
+
+        <a href="blog/fasset-promo-code-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta"><span class="blog-badge">Save the Fee</span></div>
+            <h3>Fasset Promo Code 2026 — Cut the 9.99 USDT Card Fee</h3>
+            <p>The activation codes Fasset has promoted officially, and how to tell whether one is still live before you pay.</p>
+            <span class="blog-card-link">Read the guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/fasset-card-activation-guide-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta"><span class="blog-badge">Step by Step</span></div>
+            <h3>Fasset Card Activation — The 9.99 USDT Step Explained</h3>
+            <p>Why most signups never get a working card, how to fund the wallet correctly, and what to do when activation stalls.</p>
+            <span class="blog-card-link">Read the guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/is-fasset-halal-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta"><span class="blog-badge">Honest Answer</span></div>
+            <h3>Is Fasset Halal? What Its Shariah Compliance Covers</h3>
+            <p>Who advises the platform, how staking and intra-day trading are structured, and where opinion is still unsettled.</p>
+            <span class="blog-card-link">Read the guide &#8599;</span>
+          </div>
+        </a>
+
+        <a href="blog/fasset-pakistan-guide-2026.html" style="text-decoration:none;">
+          <div class="blog-card">
+            <div class="blog-card-meta"><span class="blog-badge">Pakistan</span></div>
+            <h3>Fasset in Pakistan — PKR Rails and the New Crypto Law</h3>
+            <p>PKR deposits via P2P, card eligibility, and what the Virtual Assets Act 2026 and PVARA licensing mean for you.</p>
+            <span class="blog-card-link">Read the guide &#8599;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <section class="section" style="background: var(--bg-card2);">
     <div class="section-inner">
       <div class="section-label">Common Questions</div>
@@ -235,7 +348,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Is Fasset halal or Shariah-compliant?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">Yes. Fasset is specifically designed as an Islamic-compliant crypto platform with Shariah certification. It is one of the few regulated halal crypto exchanges, making it the go-to choice for Muslim traders globally.</div>
+          <div class="faq-a">Fasset is built specifically as a Shariah-compliant platform and retains formal Shariah advisory oversight — Mufti Faraz Adam has served as its Shariah Advisor for digital assets since 2022. Worth knowing: no universal certification for crypto exists, as AAOIFI has not issued a final standard on cryptocurrency as of 2026. See our <a href="blog/is-fasset-halal-2026.html">full breakdown of what Fasset's Shariah compliance covers</a>, and consult a scholar you trust for a ruling that applies to you.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">How do I apply the Fasset referral code?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
@@ -256,7 +369,7 @@
         <a href="exness.html">Exness Code</a>
         <a href="bitget-referral-code-2026.html">Bitget Code</a>
         <a href="okx-referral-code-2026.html">OKX Code</a>
-        <a href="blog/fasset-referral-code-2026.html">Full Fasset Guide</a>
+        <a href="blog/fasset-card-activation-guide-2026.html">Fasset Card Guide</a>
       </div>
       <p class="footer-disc">traderfeesaver.com is an independent affiliate site. Not affiliated with, endorsed by, or officially connected to Fasset. Referral rewards are subject to Fasset's terms and conditions.</p>
     </div>
