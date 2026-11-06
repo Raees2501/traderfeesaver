@@ -88,7 +88,10 @@ def parse(path):
 def build_article(src):
     meta, body, faqs, related = parse(src)
     slug = meta["slug"]
-    url = f"{SITE}/blog/{slug}.html"
+    out_path = meta.get("out", f"blog/{slug}.html")  # root-level pages set out: <file>.html
+    meta["_out"] = out_path
+    url = f"{SITE}/{out_path}"
+    in_blog = out_path.startswith("blog/")
     title, desc = meta["title"], meta["description"]
     full_title = f"{title} | TraderFeeSaver"
     h2s = re.findall(r'<div class="article-section" id="([^"]+)">\s*<h2>(.*?)</h2>', body, re.S)
@@ -131,10 +134,11 @@ def build_article(src):
                   "author": {"@type": "Organization", "name": "TraderFeeSaver", "url": SITE},
                   "publisher": {"@type": "Organization", "name": "TraderFeeSaver", "url": SITE},
                   "mainEntityOfPage": {"@type": "WebPage", "@id": url}}
+    trail = [("Home", SITE + "/")] + ([("Blog", SITE + "/blog/")] if in_blog else []) + [(text(meta["crumb"]), url)]
     crumbs_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog/"},
-        {"@type": "ListItem", "position": 3, "name": text(meta["crumb"]), "item": url}]}
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(trail)]}
+    crumb_mid = '<a href="/blog/">Blog</a><span>&#8250;</span>' if in_blog else ""
+    nav = NAV if in_blog else NAV.replace(' class="active"', "")
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": text(q), "acceptedAnswer": {"@type": "Answer", "text": text(a)}} for q, a in faqs]}
 
@@ -168,9 +172,9 @@ def build_article(src):
   </style>
 </head>
 <body>
-{NAV}
+{nav}
   <div class="breadcrumb">
-    <a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span><span class="current">{meta['crumb']}</span>
+    <a href="/">Home</a><span>&#8250;</span>{crumb_mid}<span class="current">{meta['crumb']}</span>
   </div>
   <header class="article-hero">
     <div class="article-hero-inner">
@@ -201,7 +205,7 @@ def build_article(src):
 {box}  </main>
   <footer>
     <div class="footer-inner">
-      <div class="footer-links"><a href="/">Binance Code</a><a href="/exness.html">Exness Code</a><a href="/prop-firms.html">Prop Firms</a><a href="/blog/">All Guides</a></div>
+      <div class="footer-links"><a href="/">Binance Code</a><a href="/exness.html">Exness Code</a><a href="/prop-firms.html">Prop Firms</a><a href="/blog/">All Guides</a><a href="/fasset-referral-code-2026.html">Fasset Code</a></div>
       <p class="footer-disc">{meta['disclaimer']}</p>
     </div>
   </footer>
@@ -209,7 +213,7 @@ def build_article(src):
 </body>
 </html>
 """
-    dest = os.path.join(ROOT, "blog", f"{slug}.html")
+    dest = os.path.join(ROOT, *out_path.split("/"))
     open(dest, "w", encoding="utf-8", newline="\n").write(out)
     return slug, meta
 
@@ -261,7 +265,7 @@ def build_hub(generated):
     import catalog
     pages = list(catalog.PAGES)
     for slug, meta in generated:
-        pages.append((f"/blog/{slug}.html", meta["hub_cat"], meta["hub_badge"], text(meta["title"]).replace(" — ", ": "),
+        pages.append(("/" + meta["_out"], meta["hub_cat"], meta["hub_badge"], text(meta["title"]).replace(" — ", ": "),
                       meta["hub_desc"], meta.get("modified", meta["published"]), int(meta["read"])))
     sections, items = [], []
     for key, name, blurb in catalog.CATEGORIES:
@@ -329,7 +333,7 @@ def build_hub(generated):
   </main>
   <footer>
     <div class="footer-inner">
-      <div class="footer-links"><a href="/">Binance Code</a><a href="/exness.html">Exness Code</a><a href="/prop-firms.html">Prop Firms</a><a href="/blog/">All Guides</a></div>
+      <div class="footer-links"><a href="/">Binance Code</a><a href="/exness.html">Exness Code</a><a href="/prop-firms.html">Prop Firms</a><a href="/blog/">All Guides</a><a href="/fasset-referral-code-2026.html">Fasset Code</a></div>
       <p class="footer-disc">traderfeesaver.com is an independent affiliate site and may earn a commission when you sign up through our links, at no cost to you. Not financial advice.</p>
     </div>
   </footer>

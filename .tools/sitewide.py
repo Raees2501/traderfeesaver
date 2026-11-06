@@ -65,6 +65,16 @@ def process(rel):
     doc = doc.replace('<a href="blog/binance-referral-code-2026.html">Blog</a>', '<a href="/blog/">Blog</a>')
     doc = doc.replace('<a href="../index.html#blog" class="active">Blog</a>', '<a href="/blog/" class="active">Blog</a>')
 
+    # 1b. homepage links -> "/" (index.html is only an alternate of / and wastes crawls)
+    doc = re.sub(r'href="(?:\.\./)?index\.html(#[^"]*)?"', lambda m: 'href="/' + (m.group(1) or "") + '"', doc)
+
+    # 1c. footer link to the Fasset money page on every page
+    def add_fasset(m):
+        if "fasset-referral-code-2026.html" in m.group(0):
+            return m.group(0)
+        return m.group(0)[:-len("</div>")] + '<a href="/fasset-referral-code-2026.html">Fasset Code</a></div>'
+    doc = re.sub(r'<div class="footer-links">.*?</div>', add_fasset, doc, count=1, flags=re.S)
+
     # 2. nav Blog item (simple nav-links blocks without nested divs)
     def add_blog(m):
         inner = m.group(2)

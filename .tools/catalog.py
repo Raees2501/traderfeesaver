@@ -14,8 +14,6 @@ PAGES = [
     # url, category, badge, title, desc, date, read
     ("/blog/fasset-pakistan-guide-2026.html", "pakistan", "Pakistan", "Fasset in Pakistan 2026: PKR Deposits, the Card and the New Crypto Law",
      "How Fasset's merchant network moves rupees in and out, and what the Virtual Assets Act 2026 means for users.", "2026-08-17", 7),
-    ("/fasset-referral-code-2026.html", "fasset", "Referral Code", "Fasset Referral Code 0AQ0D2G: Full Signup Guide",
-     "How the Fasset referral code works, the card bonus, and who the platform is really for.", "2026-08-17", 7),
     ("/blog/fasset-promo-code-2026.html", "fasset", "Save the Fee", "Fasset Promo Code 2026: Cut the 9.99 USDT Card Fee",
      "The activation codes Fasset has promoted officially, where to enter them, and how to tell whether one is still live.", "2026-08-17", 5),
     ("/blog/fasset-card-activation-guide-2026.html", "fasset", "Step by Step", "Fasset Card Activation 2026: the Full Walkthrough",
